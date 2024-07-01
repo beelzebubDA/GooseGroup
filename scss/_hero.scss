@@ -1,0 +1,263 @@
+.hero {
+    &_block {
+        padding: 72px 0 200px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tab {
+            padding: 35px 0 100px 0;
+        }
+
+        @include mobile {
+            padding: 32px 0 80px 0;
+        }
+    }
+
+    &_span {
+        color: #FFF;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 22px */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @include mobile {
+            font-size: 12px;
+            letter-spacing: 1.2px;
+        }
+    }
+
+    &_main {
+        width: 1000px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        position: relative;
+
+        @include tab {
+            width: 740px;
+            margin-top: 45px;
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-top: 40px;
+            width: 100%;
+            padding-bottom: 125px;
+        }
+
+        &.hero_serv-main {
+
+            @include tab {
+                margin-top: 20px;
+            }
+
+            @include mobile {
+                margin-top: 13px;
+                padding-bottom: 35px;
+            }
+            &::after {
+                content: url("../img/servHeroLine01.png");
+                top: -34px;
+                left: 25px;
+
+                @include tab {
+                    background: none;
+                    left: 40px;
+                }
+
+                @include mobile {
+                    content: "";
+                    width: 331px;
+                    height: 59px;
+                    background: url("../img/servHeroLine01.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    top: -15px;
+                    left: -5px;
+                }
+            }
+            &::before {
+                content: url("../img/servHeroLine02.png");
+                bottom: -100px;
+                left: 175px;
+                position: absolute;
+                z-index: 1;
+
+                @include mobile {
+                    content: "";
+                    width: 324px;
+                    height: 63px;
+                    background: url("../img/servHeroLine04.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    bottom: -45px;
+                    left: 0;
+                }
+            }
+
+            .hero_serv-title{
+                text-align: right;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 110%; /* 44px */
+                letter-spacing: 0.8px;
+
+                @include mobile {
+                    font-size: 30px;
+                    line-height: 140%;
+                    letter-spacing: 0.6px;
+                    text-align: start;
+                }
+
+                &::after {
+                    content: url("../img/servHeroLine03.png");
+                    bottom: -45px;
+                    right: 15px;
+                    position: absolute;
+                    z-index: 1;
+
+                    @include mobile {
+                        content: "";
+                        background: url("../img/servHeroLine03.png");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 146px;
+                        height: 20px;
+                        bottom: -13px;
+                        right: 35px;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: url("../img/heroLine.png");
+            display: block;
+            position: absolute;
+            top: -57px;
+            right: 5px;
+            z-index: 1;
+
+            @include tab {
+                content: "";
+                width: 377px;
+                height: 115px;
+                background: url("../img/heroLine.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: -23px;
+                right: 23px;
+            }
+
+            @include mobile {
+                width: 272px;
+                height: 83px;
+                top: 55px;
+                right: 75px;
+            }
+        }
+    }
+
+    &_title {
+        color: #FFF;
+        font-family: "NeueMetanaNext";
+        font-size: 115px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 115px */
+        letter-spacing: 2.3px;
+        position: relative;
+        z-index: 2;
+
+        @include tab {
+            font-size: 86px;
+        }
+
+        @include mobile {
+            font-size: 54px;
+            letter-spacing: 1.08px;
+            line-height: 130%;
+        }
+
+        picture {
+            margin-left: 60px;
+
+            @include tab {
+                margin-left: -5px;
+            }
+
+            @include mobile {
+                margin-left: -18px;
+
+                img {
+                    rotate: 90deg;
+                }
+            }
+        }
+    }
+
+    &_title-span {
+        color: #FFF;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 20.7px */
+        letter-spacing: 0.36px;
+        position: absolute;
+        display: block;
+        width: 425px;
+        right: 0;
+        bottom: 20px;
+        z-index: 2;
+
+        @include tab {
+            width: 355px;
+            right: 10px;
+            bottom: 19px;
+            font-size: 16px;
+        }
+        @include mobile {
+            right: 0;
+            letter-spacing: 0.32px;
+            width: 345px;
+        }
+    }
+
+    &_btn {
+        border-radius: 20px;
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #202020;
+        font-family: "HelveticaNowDisplay-ExtraBold";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 19.8px */
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        gap: 15px;
+        padding: 15px 0;
+
+        .hero_btn-text02 {
+            display: none;
+        }
+
+        @include mobile {
+            .hero_btn-text01 {
+                display: none;
+            }
+            .hero_btn-text02 {
+                display: block;
+            }
+        }
+    }
+}

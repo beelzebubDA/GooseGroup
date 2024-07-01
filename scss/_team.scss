@@ -1,0 +1,287 @@
+.team {
+    &_block {
+        padding-bottom: 140px;
+
+        @include tab {
+            padding-bottom: 100px;
+        }
+
+        @include mobile {
+            padding-bottom: 60px;
+        }
+    }
+
+    &_info {
+        border-radius: 20px;
+        background: #F8BC5C;
+        padding: 43px 40px 40px 50px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        @include tab {
+            padding: 33px 30px 30px 40px;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        @include mobile {
+            padding: 20px;
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+    }
+
+    &_info-L {
+        width: calc(50% - 15px);
+
+        @include tab {
+            width: calc(50% - 10px);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_info-span {
+        color: #202020;
+        font-family: "NeueMetanaNext";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 44px */
+        letter-spacing: 0.8px;
+        display: block;
+        width: 80%;
+
+        @include tab {
+            width: 100%;
+            font-size: 28px;
+        }
+
+        @include mobile {
+            font-size: 32px;
+            line-height: 130%; /* 41.6px */
+            letter-spacing: 0.64px;
+        }
+    }
+
+    &_info-R {
+        width: calc(50% - 15px);
+        position: relative;
+
+        @include tab {
+            width: calc(50% - 10px);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .line {
+            position: absolute;
+            top: 35px;
+            right: 0;
+
+            @include tab {
+                width: 300px;
+                height: 120px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            @include mobile {
+                position: relative;
+                top: auto;
+                right: auto;
+            }
+        }
+    }
+
+    &_info-text {
+        color: #202020;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 20.7px */
+        letter-spacing: 0.36px;
+        display: block;
+        width: 70%;
+
+        @include tab {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        @include tab {
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: scroll;
+            justify-content: start;
+            height: 350px;
+        }
+        
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+
+    &_persona {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background: #FFF;
+        overflow: hidden;
+        max-width: 263px;
+
+        @include tab {
+            min-width: 263px;
+        }
+    }
+
+    &_persona-name {
+        color: #202020;
+        font-family: "HelveticaNowDisplay-Medium";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 115%; /* 20.7px */
+        letter-spacing: 0.36px;
+        text-transform: uppercase;
+        padding: 12px 0 40px 12px;
+    }
+
+    &_persona-job {
+        color: #202020;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 13.8px */
+        letter-spacing: 0.24px;
+        text-transform: uppercase;
+        padding: 0 0 12px 12px;
+    }
+
+    &_persona-pic {
+        position: relative;
+        bottom: -5px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .team {
+        &_action {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+            }
+        }
+
+        &_action-block {
+            width: calc(75% - 10px);
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid #F8BC5C;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        &_action-text {
+            color: #F8BC5C;
+            font-family: "HelveticaNowDisplay-Medium";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 35.2px */
+            letter-spacing: 0.64px;
+            text-transform: uppercase;
+            padding: 10px 0;
+            animation: 10s linear infinite scroll;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            white-space: nowrap;
+
+            @include mobile {
+                font-size: 24px;
+                letter-spacing: 0.48px;
+                padding: 14px 0;
+            }
+
+            picture {
+                img {
+                    margin-bottom: 7px;
+                }
+            }
+
+            &::after {
+                content: "do you want to cooperate with professionals, click";
+            }
+        }
+
+        &_action-btn {
+            width: calc(25% - 10px);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            gap: 15px;
+            color: #202020;
+            font-family: "HelveticaNowDisplay-ExtraBold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%; /* 19.8px */
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}

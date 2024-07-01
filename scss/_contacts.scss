@@ -1,0 +1,259 @@
+.contacts {
+    &_block {
+        margin-bottom: 120px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+
+        &.ccontacts_block {
+            padding-top: 80px;
+
+            @include tab {
+                padding-top: 60px;
+            }
+
+            .ccontacts {
+                &_B {
+                    display: flex;
+                    align-items: start;
+                    justify-content: start;
+                    gap: 60px;
+                    padding-top: 80px;
+
+                    @include tab {
+                        gap: 40px;
+                    }
+
+                    @include mobile {
+                        flex-direction: column;
+                        gap: 24px;
+                    }
+                }
+
+                &_B-L {
+                    width: calc(60% - 30px);
+
+                    @include tab {
+                        width: calc(55% - 20px);
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+
+                &_B-L__title {
+                    color: #FFF;
+                    font-family: "NeueMetanaNext";
+                    font-size: 60px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 110%; /* 66px */
+                    letter-spacing: 1.2px;
+                    display: block;
+                    width: 80%;
+
+                    @include tab {
+                        font-size: 54px;
+                    }
+
+                    @include mobile {
+                        font-size: 30px;
+                        line-height: 140%;
+                        letter-spacing: 0.6px;
+                        width: 100%;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                &_B-R {
+                    width: calc(40% - 30px);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+
+                    @include tab {
+                        width: calc(45% - 20px);
+                    }
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+
+                &_B-R__span {
+                    color: #FFF;
+                    font-family: "HelveticaNowDisplay-Regular";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 115%; /* 20.7px */
+                    letter-spacing: 0.36px;
+                }
+
+                &_B-btn {
+                    color: #202020;
+                    font-family: "HelveticaNowDisplay-ExtraBold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 110%; /* 19.8px */
+                    letter-spacing: 1.8px;
+                    text-transform: uppercase;
+                    padding: 15px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    gap: 15px;
+
+                    .ccontacts_B-btnT01 {
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    .ccontacts_B-btnT02 {
+                        display: none;
+                    }
+
+                    @include tab {
+                        .ccontacts_B-btnT01 {
+                            display: none;
+                        }
+
+                        .ccontacts_B-btnT02{
+                            display: block;
+                        }
+                    }
+
+                    @include mobile {
+                        .ccontacts_B-btnT01 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+
+                            br {
+                                display: block;
+                            }
+                        }
+
+                        .ccontacts_B-btnT02{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_info {
+        border-radius: 20px;
+        background:#FF6A3A;
+        padding: 30px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 60px;
+
+        @include tab {
+            padding: 25px;
+            gap: 40px;
+        }
+
+        @include mobile {
+            padding: 20px 20px 24px 20px;
+            flex-direction: column;
+        }
+    }
+
+    &_info-L {
+        border-radius: 100px;
+        overflow: hidden;
+        max-width: 763px;
+        max-height: 300px;
+        width: calc(65% - 30px);
+
+        @include tab {
+            width: calc(65% - 20px);
+
+            .map {
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_info-R {
+        width: calc(35% - 30px);
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include tab {
+            width: calc(35% - 20px);
+            gap: 40px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_info-R__item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include mobile {
+            gap: 10px;
+        }
+    }
+
+    &_info-R__item-span {
+        border-radius: 16px;
+        background: #202020;
+        padding: 12px 12px 10px 12px;
+        color: #FFF;
+        text-align: center;
+        font-family: "NeueMetanaNext";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        width: max-content;
+    }
+
+    &_info-R__item-info {
+        color: #000;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.48px;
+        display: block;
+        width: 80%;
+
+        @include mobile {
+            font-size: 18px;
+            letter-spacing: 0.36px;
+            width: 85%;
+        }
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

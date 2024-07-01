@@ -1,0 +1,13 @@
+.sermHero {
+    background-image: url(../img/sermHeroBg.png);
+}
+
+.sermstages{
+    .stages_item {
+        padding: 40px 66px;
+
+        @include tab {
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.crmHero{
+    background-image: url(../img/crmHeroBg.png);
+
+    .devHero_block {
+        margin-top: 40px;
+        padding: 168px 0 168px 100px;
+        margin-bottom: 100px;
+
+        @include tab {
+            padding: 80px 0 80px 60px;
+            margin-bottom: 60px;
+            margin-top: 20px;
+        }
+
+        @include mobile {
+            padding: 200px 0 0 0;
+            margin-top: 10px;
+        }
+    }
+}
+
+.crmStages {
+    .stages_item {
+        padding: 40px 45px;
+
+        @include tab {
+            padding: 15px;
+        }
+
+        &.active {
+            padding: 40px;
+
+            @include tab {
+                padding: 30px;
+            }
+
+            @include mobile {
+                padding: 20px;
+                gap: 50px;
+            }
+        }
+    }
+}

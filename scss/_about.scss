@@ -1,0 +1,370 @@
+.about {
+    &_block {
+        padding-bottom: 140px;
+
+        @include tab {
+            padding-bottom: 100px;
+        }
+
+        @include mobile {
+            padding-bottom: 60px;
+        }
+    }
+
+    &_sides {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 30px;
+
+        @include tab {
+            gap: 20px;
+            flex-direction: column;
+        }
+    }
+
+    &_L {
+        width: calc(50% - 15px);
+
+        @include tab {
+            width: 100%;
+        }
+    }
+
+    &_L-title {
+        color: #FFF;
+        font-family: "NeueMetanaNext";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 66px */
+        letter-spacing: 1.2px;
+
+        @include mobile {
+            font-size: 32px;
+            letter-spacing: 0.64px;
+        }
+    }
+
+    &_R {
+        width: calc(50% - 15px);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include tab {
+            width: 100%;
+        }
+
+        @include mobile {
+            gap: 16px;
+        }
+    }
+
+    &_R-text {
+        color: #FFF;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 34.5px */
+        letter-spacing: 0.6px;
+
+        @include tab {
+            font-size: 24px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+            letter-spacing: 0.4px;
+        }
+    }
+
+    &_items {
+        padding-top: 140px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include tab {
+            padding-top: 100px;
+        }
+
+        @include mobile {
+            padding-top: 40px;
+        }
+    }
+
+    &_item {
+        border-radius: 20px;
+        background: #FFF;
+        padding: 40px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 40px;
+
+        @include tab {
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @include mobile {
+            padding: 20px;
+            flex-direction: column;
+            overflow: hidden;
+            gap: 20px;
+        }
+
+        .about_item-L {
+            position: relative;
+
+            .about_item-pic01 {
+                position: absolute;
+                z-index: 1;
+            }
+            .about_item-pic02 {
+                position: absolute;
+                z-index: 1;
+            }
+        }
+
+        &:nth-of-type(1) {
+            .about_item-L {
+                .about_item-pic01 {
+                    right: 255px;
+                    top: 0;
+                }
+                .about_item-pic02 {
+                    right: 120px;
+                    top: 0;
+                }
+
+                @include tab {
+                    .about_item-pic01 {
+                        right: 30px;
+                        top: -20px;
+                        width: 150px;
+                        height: 150px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .about_item-pic02 {
+                        right: -24px;
+                        top: 63px;
+                        width: 120px;
+                        height: 76px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                @include mobile {
+                    .about_item-pic01 {
+                        width: 120px;
+                        height: 120px;
+                        right: 32px;
+                        top: 9px;
+                    }
+
+                    .about_item-pic02 {
+                        width: 120px;
+                        height: 78px;
+                        right: 20px;
+                        top: 110px;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            .about_item-L {
+                .about_item-pic01 {
+                    right: 115px;
+                    top: -12px;
+                }
+                .about_item-pic02 {
+                    right: 35px;
+                    top: 80px;
+                }
+
+                @include tab {
+                    .about_item-pic01 {
+                        right: 30px;
+                        top: -20px;
+                        width: 150px;
+                        height: 150px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .about_item-pic02 {
+                        right: -24px;
+                        top: 63px;
+                        width: 120px;
+                        height: 60px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                @include mobile {
+                    .about_item-pic01 {
+                        width: 120px;
+                        height: 120px;
+                        right: 32px;
+                        top: 9px;
+                    }
+
+                    .about_item-pic02 {
+                        width: 152px;
+                        height: 50x;
+                        right: 20px;
+                        top: 110px;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            .about_item-L {
+                .about_item-pic01 {
+                    right: 355px;
+                    top: 0px;
+                }
+                .about_item-pic02 {
+                    right: 30px;
+                    top: 20%;
+                }
+
+                @include tab {
+                    .about_item-pic01 {
+                        right: 30px;
+                        top: -20px;
+                        width: 150px;
+                        height: 150px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .about_item-pic02 {
+                        right: -35px;
+                        top: 132px;
+                        width: 140px;
+                        height: 42px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                @include mobile {
+                    .about_item-pic01 {
+                        width: 120px;
+                        height: 120px;
+                        right: 32px;
+                        top: 9px;
+                    }
+
+                    .about_item-pic02 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &_item-L {
+        width: calc(50% - 20px);
+
+        @include tab {
+            width: calc(50% - 15px);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_item-title {
+        color: #202020;
+        font-family: "NeueMetanaNext";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 56px */
+        letter-spacing: 0.8px;
+        display: block;
+        width: 80%;
+        position: relative;
+        z-index: 2;
+
+        @include tab {
+            font-size: 28px;
+            width: 100%;
+        }
+    }
+
+    &_item-R {
+        width: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include tab {
+            gap: 15px;
+            width: calc(50% - 15px);
+        }
+
+        @include mobile {
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    &_item-numb {
+        color: #202020;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 17.6px */
+        letter-spacing: 0.32px;
+    }
+
+    &_item-text {
+        color: #202020;
+        font-family: "HelveticaNowDisplay-Regular";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 20.7px */
+        display: block;
+        width: 80%;
+
+        @include mobile {
+            width: 100%;
+            letter-spacing: 0.36px;
+            width: 90%;
+        }
+    }
+}
